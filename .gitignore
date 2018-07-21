@@ -2,7 +2,7 @@
 *.class
 .classpath
 .project
-bin
+bin/
 
 # Log file
 *.log
