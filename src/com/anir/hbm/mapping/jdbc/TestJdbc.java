@@ -1,4 +1,4 @@
-package com.anir.hbm.mapping.one2one.jdbc;
+package com.anir.hbm.mapping.jdbc;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
