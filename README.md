@@ -2,7 +2,7 @@
 hibernate-Advance sample project. for defining Database mapping using Hibernate mapping annotation. and handling the CRUD operation with maintaining the key relationship mapping.
 
 ##Feature:
-This is Java Adavance Hibernate project where we have used multiple tables to handle Table Mapping association.like,
+This is Java Advance Hibernate project where we have used multiple tables to handle Table Mapping association.like,
 - One-To-One
 - One-To-Many
 - Many-to-Many
@@ -25,7 +25,7 @@ This is Java Adavance Hibernate project where we have used multiple tables to ha
 
 #### Explore Project:
 
-All the application are avaiable under package named "*com.anir.hbm.mapping*".
+All the application are available under package named "*com.anir.hbm.mapping*".
 
 ##### Mapping package details :
 TBD
