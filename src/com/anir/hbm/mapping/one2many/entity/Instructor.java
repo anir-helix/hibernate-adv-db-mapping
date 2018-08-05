@@ -1,5 +1,8 @@
 package com.anir.hbm.mapping.one2many.entity;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -7,6 +10,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
@@ -31,6 +35,18 @@ public class Instructor {
 	@JoinColumn(name="instructor_detail_id")
     private InstructorDetail instructorDetail;
 
+	/****************************************************************************
+	 * Here We done Mapping in respect to 'instructor' property field define
+	 * in Course class 
+	 * 
+	 * Here on Deletion of any Instructor A Course should not get Deleted
+	 * thus, here we don't used the CascaseType.REMOVE directly
+	 * 
+	 ***************************************************************************/
+	@OneToMany(mappedBy="instructor", cascade = { CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST,
+			CascadeType.REFRESH })
+	private List<Course> courses;
+	
 	/**
 	 * 
 	 */
@@ -84,6 +100,13 @@ public class Instructor {
 	}
 
 	/**
+	 * @return the courses
+	 */
+	public List<Course> getCourses() {
+		return courses;
+	}
+
+	/**
 	 * @param id the id to set
 	 */
 	public void setId(int id) {
@@ -118,6 +141,14 @@ public class Instructor {
 		this.instructorDetail = instructorDetail;
 	}
 
+	
+	/**
+	 * @param courses the courses to set
+	 */
+	public void setCourses(List<Course> courses) {
+		this.courses = courses;
+	}
+
 	/* (non-Javadoc)
 	 * @see java.lang.Object#toString()
 	 */
@@ -127,5 +158,15 @@ public class Instructor {
 				+ "]";
 	}
 
+	// Adding a Convenience method for Bi-directional relationship
+	public void add(Course tempCourse) {
+		if(this.courses == null ) {
+			this.courses = new ArrayList<>();
+		}
+		
+		this.courses.add(tempCourse);
+		
+		tempCourse.setInstructor(this);
+	}
 	
 }
