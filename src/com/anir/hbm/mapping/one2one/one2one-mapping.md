@@ -3,11 +3,11 @@ In this example you will learn how to map one-to-one relationship using Hibernat
 A one-to-one is type of association where column will be set as unique. For example, an details object can be associated with a single person object.
 
 Here we have two tables
-- Instrutor
-- InstructorDetails
+- instructor
+- instructorDetails
 
-which has a relationship of 1:1 cardinailty:
-> Instrutor  -- HasA --> InstructorDetails
+which has a relationship of 1:1 cardinality:
+> instructor  -- HasA --> instructorDetails
 
 for DB schema import we have attached SQL file in following folder to import in MYSQL:
 
@@ -18,7 +18,7 @@ These can be further divided into 2 types of mapping
 1. unidirectional mappings
 2. bidirectional mappings
 
-in our sample project we have diffrent module which will help you to understand thease mapping and functionality.
+in our sample project we have different module which will help you to understand thease mapping and functionality.
 
 *--> First View Unidirectional mappings, then walk through with bidirectional Mappings for better understanding.*
 

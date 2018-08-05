@@ -18,7 +18,7 @@ public class GetDemo {
 
 	public static void main(String[] args) {
 		// Create Session Factory
-		SessionFactory factory = new Configuration().configure("hibernate.cfg.xml").addAnnotatedClass(Instructor.class)
+		SessionFactory factory = new Configuration().configure("hibernate.cfg-one2one.xml").addAnnotatedClass(Instructor.class)
 				.addAnnotatedClass(InstructorDetail.class).buildSessionFactory();
 
 		// Create Session
