@@ -6,6 +6,7 @@ import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -43,7 +44,16 @@ public class Instructor {
 	 * thus, here we don't used the CascaseType.REMOVE directly
 	 * 
 	 ***************************************************************************/
-	@OneToMany(mappedBy="instructor", cascade = { CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST,
+	
+	/***************************************************************************
+	 * Here we have Also represent the Data fetch type
+	 * i.e.; Eager Type and Lazy Type
+	 * We have to mention the FetchType based on that Hibernate will load the
+	 * data on demand or whole set at first call.
+	 *  
+	***************************************************************************/
+	
+	@OneToMany(mappedBy="instructor", fetch= FetchType.EAGER, cascade = { CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST,
 			CascadeType.REFRESH })
 	private List<Course> courses;
 	

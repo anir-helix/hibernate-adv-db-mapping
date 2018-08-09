@@ -25,5 +25,14 @@ in our sample project we have different module which will help you to understand
 	For better understanding of Mapping and Cardinality we have set a Real world alike Rule, i.e.; 
 	- **Where a Instructor can have Many to one relation with  Course.**
 	- **Cascading rule is: Deletion of any Instructor A Course should not get Deleted**
+	
+#Add Ons
+
+Here we have a Bonus module where we discussed detail functionality about **Hibernate Data Fetching Technology**; i.e.; Hibernate data loading technics as;
+ 
+ EAGER Loading & LAZY Loading.
+ these 2 functionality is being defined under package --> *om.anir.hbm.mapping.one2many.dbFetchType*
+ 
+ Please Have a look for details. 
 
 Each of the package contains it's own readMe file for better modular level of understanding and code is fully stacked with javadoc commenting for coder better understanding.
