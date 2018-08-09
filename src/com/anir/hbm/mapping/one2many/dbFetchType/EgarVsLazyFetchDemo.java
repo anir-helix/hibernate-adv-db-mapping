@@ -1,4 +1,4 @@
-package com.anir.hbm.mapping.one2many.dbFetchType;
+package com.anir.hbm.mapping.one2many.dbfetchtype;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -59,6 +59,8 @@ public class EgarVsLazyFetchDemo {
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
+			 // add clean up code
+            session.close();
 			factory.close();
 			System.out.println("\n ==> finally block, factory closed!");
 		}

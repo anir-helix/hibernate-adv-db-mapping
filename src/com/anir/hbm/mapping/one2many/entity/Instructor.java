@@ -53,7 +53,7 @@ public class Instructor {
 	 *  
 	***************************************************************************/
 	
-	@OneToMany(mappedBy="instructor", fetch= FetchType.EAGER, cascade = { CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST,
+	@OneToMany(mappedBy="instructor", fetch= FetchType.LAZY, cascade = { CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST,
 			CascadeType.REFRESH })
 	private List<Course> courses;
 	
