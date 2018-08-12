@@ -9,6 +9,9 @@ Here we have two tables
 which has a relationship of 1:1 cardinality:
 > instructor  -- HasA --> instructorDetails
 
+for better understanding we have provided the Visual ERD diagram for you, please see the image file in following folder:
+>  -->/hibernate-adv-db-mapping/starter_db_files/ERD/erd-hb-one-to-one
+
 for DB schema import we have attached SQL file in following folder to import in MYSQL:
 
 >  -->/hibernate-adv-db-mapping/starter_db_files/hibernate-mapping-database-scripts/hb-01-one-to-one-uni
