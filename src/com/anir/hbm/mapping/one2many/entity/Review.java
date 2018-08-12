@@ -22,14 +22,12 @@ public class Review {
 	public Review() {
 	}
 
-
 	/**
 	 * @param comment
 	 */
 	public Review(String comment) {
 		this.comment = comment;
 	}
-
 
 	/**
 	 * @return the id
@@ -45,7 +43,6 @@ public class Review {
 	public String getComment() {
 		return comment;
 	}
-
 
 	/**
 	 * @param id the id to set
