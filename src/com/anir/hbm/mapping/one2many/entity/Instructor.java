@@ -51,6 +51,7 @@ public class Instructor {
 	 * We have to mention the FetchType based on that Hibernate will load the
 	 * data on demand or whole set at first call.
 	 *  
+	 *Need to be changed when testing scenario
 	***************************************************************************/
 	
 	@OneToMany(mappedBy="instructor", fetch= FetchType.LAZY, cascade = { CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST,

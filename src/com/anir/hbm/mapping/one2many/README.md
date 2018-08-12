@@ -1,6 +1,9 @@
 # Hibernate One-To-Many Mapping
-In this example you will learn how to map one-to-one relationship using Hibernate. Most of the times, database tables are associated with each other. One of the forms of association – **One-To-Many** or **Many-To-One**. 
-A one-to-one is type of association where column will be set as unique. For example, an details object can be associated with a single person object.
+In this example you will learn how to map one-to-one relationship using Hibernate. Most of the times, database tables are associated with each other. One of the forms of association – 
+	**One-To-Many** or 
+	**Many-To-One**. 
+	
+This type of association where column will be set as non-unique but associated data followed on ACID rule. For example, an details object can be or being associated with multiple object.
 
 Here we have three tables
 - instructor
@@ -16,7 +19,7 @@ other has a relationship of 1:1 cardinality:
 
 for DB schema import we have attached SQL file in following folder to import in MYSQL:
 
->  -->/hibernate-adv-db-mapping/starter_db_files/hibernate-mapping-database-scripts/hb-02-one-to-many
+>  -->/hibernate-adv-db-mapping/starter_db_files/hibernate-mapping-database-scripts/hb-02-one-to-many/01-create-db.sql
 
 
 in our sample project we have different module which will help you to understand these mapping and functionality.
@@ -28,10 +31,10 @@ in our sample project we have different module which will help you to understand
 	
 #Add Ons
 
-Here we have a Bonus module where we discussed detail functionality about **Hibernate Data Fetching Technology**; i.e.; Hibernate data loading technics as;
+Here we have a Bonus module where we discussed detail functionality about **Hibernate Data Fetching Technology**; i.e.; Hibernate data loading technique as;
  
  EAGER Loading & LAZY Loading.
- these 2 functionality is being defined under package --> *om.anir.hbm.mapping.one2many.dbFetchType*
+ these 2 functionality is being defined under package --> *com.anir.hbm.mapping.one2many.dbFetchType*
  
  Please Have a look for details. 
 
